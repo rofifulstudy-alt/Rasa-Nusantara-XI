@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rasa Nusantara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Rasa Nusantara</h1>
+    <p>Jelajahi kelezatan kuliner tradisional Indonesia</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="#beranda">Beranda</a>
+    <a href="#resep">Daftar Resep</a>
+    <a href="#tentang">Tentang</a>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="beranda">
+      <div class="hero-content">
+        <p class="hero-label">JELAJAHI KEKAYAAN KULINER INDONESIA</p>
+        <h2>Temukan Rekomendasi Kuliner Nusantara</h2>
+        <p>
+          Dari Sabang sampai Merauke, temukan berbagai
+          makanan khas Indonesia lengkap dengan gambar,
+          bahan, dan cara pembuatannya.
+        </p>
+
+
+<form class="search-box" id="searchForm">
+    <input
+        type="search"
+        id="searchInput"
+        placeholder="Cari makanan favoritmu..."
+    >
+
+    <button type="submit">
+        Cari Resep
+    </button>
+</form>
+    </section>
+
+    <section class="kategori-daerah">
+      <h3>Jelajahi Berdasarkan Provinsi Diseluruh Daerah Indonesia</h3>
+
+<div class="filter-daerah-container">
+  <button type="button" class="filter-daerah aktif" data-daerah="Semua">Semua</button>
+  <button type="button" class="filter-daerah" data-daerah="Aceh">Aceh</button>
+  <button type="button" class="filter-daerah" data-daerah="Sumatera Utara">Sumatera Utara</button>
+  <button type="button" class="filter-daerah" data-daerah="Sumatera Barat">Sumatera Barat</button>
+  <button type="button" class="filter-daerah" data-daerah="Riau">Riau</button>
+  <button type="button" class="filter-daerah" data-daerah="Kepulauan Riau">Kepulauan Riau</button>
+  <button type="button" class="filter-daerah" data-daerah="Jambi">Jambi</button>
+  <button type="button" class="filter-daerah" data-daerah="Sumatera Selatan">Sumatera Selatan</button>
+  <button type="button" class="filter-daerah" data-daerah="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</button>
+  <button type="button" class="filter-daerah" data-daerah="Bengkulu">Bengkulu</button>
+  <button type="button" class="filter-daerah" data-daerah="Lampung">Lampung</button>
+
+  <button type="button" class="filter-daerah" data-daerah="DKI Jakarta">DKI Jakarta</button>
+  <button type="button" class="filter-daerah" data-daerah="Banten">Banten</button>
+  <button type="button" class="filter-daerah" data-daerah="Jawa Barat">Jawa Barat</button>
+  <button type="button" class="filter-daerah" data-daerah="Jawa Tengah">Jawa Tengah</button>
+  <button type="button" class="filter-daerah" data-daerah="DI Yogyakarta">DI Yogyakarta</button>
+  <button type="button" class="filter-daerah" data-daerah="Jawa Timur">Jawa Timur</button>
+
+  <button type="button" class="filter-daerah" data-daerah="Bali">Bali</button>
+  <button type="button" class="filter-daerah" data-daerah="Nusa Tenggara Barat">Nusa Tenggara Barat</button>
+  <button type="button" class="filter-daerah" data-daerah="Nusa Tenggara Timur">Nusa Tenggara Timur</button>
+
+  <button type="button" class="filter-daerah" data-daerah="Kalimantan Barat">Kalimantan Barat</button>
+  <button type="button" class="filter-daerah" data-daerah="Kalimantan Tengah">Kalimantan Tengah</button>
+  <button type="button" class="filter-daerah" data-daerah="Kalimantan Selatan">Kalimantan Selatan</button>
+  <button type="button" class="filter-daerah" data-daerah="Kalimantan Timur">Kalimantan Timur</button>
+  <button type="button" class="filter-daerah" data-daerah="Kalimantan Utara">Kalimantan Utara</button>
+
+  <button type="button" class="filter-daerah" data-daerah="Sulawesi Utara">Sulawesi Utara</button>
+  <button type="button" class="filter-daerah" data-daerah="Gorontalo">Gorontalo</button>
+  <button type="button" class="filter-daerah" data-daerah="Sulawesi Tengah">Sulawesi Tengah</button>
+  <button type="button" class="filter-daerah" data-daerah="Sulawesi Barat">Sulawesi Barat</button>
+  <button type="button" class="filter-daerah" data-daerah="Sulawesi Selatan">Sulawesi Selatan</button>
+  <button type="button" class="filter-daerah" data-daerah="Sulawesi Tenggara">Sulawesi Tenggara</button>
+
+  <button type="button" class="filter-daerah" data-daerah="Maluku">Maluku</button>
+  <button type="button" class="filter-daerah" data-daerah="Maluku Utara">Maluku Utara</button>
+
+  <button type="button" class="filter-daerah" data-daerah="Papua">Papua</button>
+  <button type="button" class="filter-daerah" data-daerah="Papua Barat">Papua Barat</button>
+  <button type="button" class="filter-daerah" data-daerah="Papua Selatan">Papua Selatan</button>
+  <button type="button" class="filter-daerah" data-daerah="Papua Tengah">Papua Tengah</button>
+  <button type="button" class="filter-daerah" data-daerah="Papua Pegunungan">Papua Pegunungan</button>
+  <button type="button" class="filter-daerah" data-daerah="Papua Barat Daya">Papua Barat Daya</button>
+</div>
+      <div id="subDaerah" hidden></div>
+    </section>
+
+    <section class="resep-section" id="resep">
+      <h2>Rekomendasi Resep Nusantara</h2>
+      <p id="jumlahResep">Memuat resep...</p>
+      <div class="recipe-container" id="recipeContainer"></div>
+    </section>
+
+    <section id="detailResep" class="detail-section" hidden>
+      <div id="isiDetail"></div>
+      <button id="tutupDetail" type="button">← Kembali</button>
+    </section>
+
+   
+    <section id="tentang" class="tentang">
+    <h2>Tentang Rasa Nusantara</h2>
+
+    <div class="tentang-content">
+        <p>
+            Indonesia dikenal sebagai negara yang memiliki banyak sekali makanan khas dengan cita rasa yang beragam. Setiap daerah mempunyai hidangan tradisional yang unik, mulai dari makanan
+            berbahan dasar daging, ikan, sayuran, hingga berbagai macam jajanan khas yang sudah dikenal sejak dahulu.
+        </p>
+
+        <p>
+            Berangkat dari kekayaan kuliner tersebut, Rasa Nusantara hadir
+            sebagai website yang mengajak pengunjung untuk mengenal lebih
+            dekat berbagai makanan tradisional Indonesia. Di sini, pengunjung
+            bisa menemukan beragam resep dari berbagai daerah, lengkap dengan
+            gambar makanan, deskripsi, bahan-bahan, dan cara pembuatannya.
+        </p>
+
+        <p>
+            Tidak perlu bingung ketika ingin mencari resep tertentu.
+            Rasa Nusantara menyediakan fitur pencarian untuk memudahkan
+            pengunjung menemukan makanan yang mereka inginkan. Selain itu,
+            tersedia juga rekomendasi makanan yang bisa menjadi inspirasi
+            bagi siapa saja yang ingin mencoba hidangan baru.
+        </p>
+
+        <p>
+            Website ini dibuat bukan hanya untuk berbagi resep, tetapi juga
+            untuk memperkenalkan kekayaan budaya Indonesia melalui makanan.
+            Kami berharap generasi muda semakin tertarik mengenal makanan
+            khas daerah dan ikut menjaga warisan kuliner agar tidak
+            terlupakan oleh perkembangan zaman.
+        </p>
+
+        <p>
+            Karena setiap makanan memiliki keunikan dan cerita tersendiri,
+            mari bersama-sama menjelajahi kelezatan kuliner dari berbagai
+            penjuru Indonesia. Temukan resep favoritmu dan kenali lebih
+            banyak cita rasa Indonesia bersama Rasa Nusantara!
+        </p>
+    </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Rasa Nusantara | Cinta Kuliner Indonesia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

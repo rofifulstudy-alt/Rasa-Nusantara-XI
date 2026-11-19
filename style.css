@@ -1,0 +1,657 @@
+ 
+/* ===== PENGATURAN DASAR ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffaf1;
+  color: #29352c;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(135deg, #145c3a, #238653);
+  color: white;
+  text-align: center;
+  padding: 38px 18px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #e8f5e9;
+}
+
+/* ===== NAVIGASI ===== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #10472e;
+  padding: 13px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 7px 13px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.navbar a:hover {
+  background: #28784c;
+}
+
+/* ===== BAGIAN PEMBUKA ===== */
+.hero {
+  text-align: center;
+  padding: 45px 18px;
+  background: #f3e5c9;
+}
+
+.hero h2 {
+  color: #145c3a;
+  font-size: 27px;
+  margin-top: 0;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+#searchInput {
+  display: block;
+  width: 100%;
+  max-width: 470px;
+  margin: 22px auto 0;
+  padding: 15px 18px;
+  border: 2px solid #d6dfd2;
+  border-radius: 30px;
+  outline: none;
+  background: white;
+  font-size: 16px;
+  box-shadow: 0 4px 12px #0000000a;
+}
+
+#searchInput:focus {
+  border-color: #238653;
+}
+
+/* ===== DAFTAR RESEP ===== */
+.resep-section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 35px 18px 45px;
+}
+
+.resep-section > h2 {
+  text-align: center;
+  color: #145c3a;
+  font-size: 27px;
+}
+
+#jumlahResep {
+  text-align: center;
+  color: #687369;
+  margin-bottom: 24px;
+}
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.recipe-card {
+  min-width: 0;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #eee9de;
+  border-radius: 15px;
+  box-shadow: 0 5px 16px #253b2b0c;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px #253b2b1c;
+}
+
+.recipe-card img {
+  display: block;
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  background: #eee8dc;
+}
+
+.recipe-info {
+  padding: 13px;
+}
+
+.recipe-info h3 {
+  color: #145c3a;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+
+.recipe-info p {
+  font-size: 13px;
+  color: #626b62;
+  margin: 6px 0;
+}
+
+button {
+  border: none;
+  border-radius: 25px;
+  padding: 11px 16px;
+  background: #197447;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #10472e;
+}
+
+.recipe-info button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ===== DETAIL RESEP ===== */
+.detail-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 22px;
+  background: white;
+  border: 1px solid #eee9de;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px #0000000a;
+}
+
+.detail-section h2,
+.detail-section h3 {
+  color: #145c3a;
+}
+
+.detail-section img {
+  display: block;
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.detail-section li {
+  padding: 4px 0;
+}
+
+/* ===== TENTANG ===== */
+.tentang {
+  background: #f3e5c9;
+  text-align: center;
+  padding: 32px 18px;
+}
+
+.tentang h2 {
+  color: #145c3a;
+}
+
+.tentang p {
+  max-width: 650px;
+  margin: auto;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #10472e;
+  color: white;
+  text-align: center;
+  padding: 22px 15px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ===== TAMPILAN LAYAR BESAR ===== */
+@media (min-width: 700px) {
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .recipe-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .recipe-card img {
+    height: 200px;
+  }
+
+  .recipe-info {
+    padding: 17px;
+  }
+
+  .recipe-info h3 {
+    font-size: 18px;
+  }
+
+  .recipe-info p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .recipe-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Tombol kembali di bagian bawah detail resep */
+#tutupDetail {
+  display: block;
+  margin: 30px 0 10px auto;
+}
+
+/* ===== HERO DENGAN FOTO MAKANAN ===== */
+.hero {
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 65px 8%;
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 25, 12, 0.85),
+      rgba(0, 25, 12, 0.15)
+    ),
+   url("images/rendang.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 38px;
+}
+
+.hero p {
+  margin: 12px 0;
+  color: white;
+}
+
+.hero-label {
+  color: #ffe4a3 !important;
+}
+
+.tombol-rekomendasi {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #238653;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 350px;
+    padding: 45px 22px;
+  }
+
+  .hero h2 {
+    font-size: 29px;
+  }
+}
+
+/* ===== KATEGORI DAERAH ===== */
+.kategori-daerah {
+  max-width: 1150px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.kategori-daerah h3 {
+  color: #145c3a;
+}
+
+.tombol-kategori {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-daerah.aktif {
+  background: #10472e;
+  outline: 2px solid #a8c8ae;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    max-width: 535px;
+    width: 100%;
+    background: white;
+    border-radius: 40px;
+    padding: 5px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 15px;
+    background: transparent;
+}
+
+.search-box button {
+    border: none;
+    background: #008f62;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.search-box button:hover {
+    background: #00764f;
+}
+/* ===== BAGIAN TENTANG RASA NUSANTARA ===== */
+.tentang {
+    width: 100%;
+    padding: 35px 5%;
+    box-sizing: border-box;
+}
+
+.tentang h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #006b49;
+}
+
+.tentang-content {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.tentang-content p {
+    margin-bottom: 22px;
+    text-indent: 30px;
+}
+/* =================================
+   FILTER DAERAH - RASA NUSANTARA
+================================= */
+
+.filter-daerah-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 14px;
+    width: 100%;
+    max-width: 1150px;
+    margin: 25px auto;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+/* Tombol provinsi */
+.filter-daerah {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 19px;
+    min-height: 42px;
+
+    background: #ffffff;
+    color: #087b55;
+
+    border: 1px solid #dce9e2;
+    border-radius: 30px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin: 0;
+}
+
+/* Efek ketika diarahkan */
+.filter-daerah:hover {
+    background: #e8f5ee;
+    border-color: #087b55;
+    color: #056344;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 100, 65, 0.10);
+}
+
+/* Provinsi yang sedang aktif */
+.filter-daerah.aktif {
+    background: #087b55;
+    color: #ffffff;
+    border-color: #087b55;
+    box-shadow: 0 3px 9px rgba(0, 100, 65, 0.15);
+}
+
+/* Efek hover pada tombol aktif */
+.filter-daerah.aktif:hover {
+    background: #066b49;
+    color: #ffffff;
+}
+
+/* Efek ketika tombol diklik */
+.filter-daerah:active {
+    transform: scale(0.97);
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .filter-daerah-container {
+        gap: 9px;
+        padding: 12px 8px;
+    }
+
+    .filter-daerah {
+        padding: 9px 14px;
+        min-height: 38px;
+        font-size: 12px;
+    }
+}
+/* Tombol filter provinsi */
+.filter-daerah {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+    min-height: 42px;
+
+    background: #ffffff;
+    color: #087b55;
+
+    border: 1.3px solid #087b55;
+    border-radius: 30px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.25s ease;
+}
+
+/* Efek hover */
+.filter-daerah:hover {
+    background: #eaf6f0;
+    color: #056344;
+    border-color: #056344;
+    transform: translateY(-2px);
+}
+
+/* Tombol provinsi aktif */
+.filter-daerah.aktif {
+    background: #ffffff;
+    color: #087b55;
+    border: 1.5px solid #087b55;
+    box-shadow: 0 2px 7px rgba(8, 123, 85, 0.10);
+}
+
+/* Efek ketika ditekan */
+.filter-daerah:active {
+    transform: scale(0.97);
+}
+/* Filter Kabupaten/Kota */
+#subDaerah {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 1150px;
+}
+
+#subDaerah[hidden] {
+  display: none;
+}
+
+.sub-daerah-judul {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.filter-kabupaten {
+  border: 1px solid #198754;
+  background: white;
+  color: #176b42;
+  border-radius: 20px;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-kabupaten:hover,
+.filter-kabupaten.aktif {
+  background: #198754;
+  color: white;
+}
+
+.sub-daerah-pesan {
+  flex-basis: 100%;
+  text-align: center;
+  color: #777;
+}
+/* Filter Kabupaten/Kota */
+#subDaerah {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 1150px;
+}
+
+#subDaerah[hidden] {
+  display: none;
+}
+
+.sub-daerah-judul {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.filter-kabupaten {
+  border: 1px solid #198754;
+  background: white;
+  color: #176b42;
+  border-radius: 20px;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-kabupaten:hover,
+.filter-kabupaten.aktif {
+  background: #198754;
+  color: white;
+}
+
+.sub-daerah-pesan {
+  flex-basis: 100%;
+  text-align: center;
+  color: #777;
+}
+#kembaliDaftarWilayah {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #176b4a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
